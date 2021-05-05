@@ -1,0 +1,116 @@
+header{
+    height: 60px;
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    border-bottom: 3px solid black;
+}
+.main_div{
+    height: 100%;
+    width: 10%;
+    transition: 0.3s;
+    justify-content: left;
+
+}
+
+.info{
+    height: 100%;
+    width: 100%;
+    justify-content: right;
+
+}
+
+.raid_wing{
+    list-style: none;
+    margin-bottom: 0px;
+}
+
+.raid_label{
+    margin-bottom: 0px;
+}
+
+#sab_label{
+    color: green !important;
+
+}
+
+#submit_btn{
+    margin-top: 5px;
+    border-radius: 5px !important;
+}
+
+.nav_bar_content{
+    text-align: center;
+}
+
+#check_btn{
+    visibility: visible;
+    margin-top: 5px;
+    border-radius: 5px !important;
+}
+
+.nav_bar_content li{
+    list-style-type: none;
+    margin: 20px;
+    color: white;
+    font-size: 20px;
+    display: none;
+}
+
+/* Control the left side */
+.left {
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    width: 0%;
+    height: 100%;
+    left: 0;
+
+
+
+  }
+  
+  /* Control the right side */
+  .right {
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+    transition: 0.3s;
+    width: 100%;
+    height: 100%;
+    right: 0;
+
+  }
+
+  #content{
+      padding-left: 10px;
+      margin-bottom: 0px !important;
+  }
+
+  #logo{
+      margin-bottom: 15px;
+      align-self: center;
+  }
+
+  #nav_button{
+    width: 40px;
+    height: 40px;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    position: relative;
+    bottom: 5px;
+  }
+
+  #selected{
+      background-color:gray !important;
+      color: darkgray;
+  }
+
+  .header_container{
+      height: 100%;
+      width: 100%;
+  }
+
+  .inline{
+      display: inline !important;
+  }
+
+  div.inline { float:left; }
+
