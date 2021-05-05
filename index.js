@@ -9,11 +9,14 @@ async function openNav(){
         $('.left').css('width' , '20%')
         $('.right').css('width' , '80%')     
         $('.nav_bar_content li').css('display' , 'block')
+        //border-bottom: 3px solid black;
+        $('.left').css("border-right", '3px solid black')
         nav_state = 1;
     }else{
         $('.left').css('width' , '0%')
         $('.right').css('width' , '100%')
         $('.nav_bar_content li').css('display' , 'none')
+        $('.left').css("border-right", 'none')
         nav_state = 0;
        
     }
@@ -39,7 +42,7 @@ function check_bosses(data){
 }
 
 function submit_api(){
-    api_key = document.getElementById("api-key").value;
+    api_key = document.getElementById("api_key_input").value;
     localStorage.setItem("api_key" , api_key)
  
 }
@@ -69,6 +72,5 @@ function open_todo(){
 }
 
 function open_home(){
-    document.location.href = "./home.html";
-    $('#check_btn').css('visibility', 'hidden');
+    document.location.href = "./index.html";
 }

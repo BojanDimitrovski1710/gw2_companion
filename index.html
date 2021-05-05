@@ -17,7 +17,7 @@
         <div class="header_container">
             <img src="https://i.ibb.co/8NHYk0g/logo2.png" id="logo" class="inline">
             <button onclick="openNav()" id="nav_button"><i class="fas fa-bars"></i></button>
-            <h1 class="inline">My Very Special Site</h1>
+            <h1 class="inline">My Testing site</h1>
         </div>
         
     </header>
@@ -38,15 +38,19 @@
         <!--Site Content-->
         <div class="split right inline">
             <div class="info">
-                <p id='content'>
-                    <label for="api-key">Enter your API key</label>
+                <div id='content' class="form-group">
+                    <label for="api_key_input" id="api_key_input_label">Enter your API key below</label>
                     <br>
-                    <input type="text" id="api-key">
-                    <br>
+                    <input type="text" id="api_key_input" class="form-control" placeholder="XXXX-XXXX-XXXX-XXXX-XXXX-XXXX-XXXX-XXXX">
+
                     <button class="btn-success" id="submit_btn" onclick="submit_api()">Submit</button>
                     <br>
+                    
                     <button class="btn-primary" id="check_btn" onclick="check_api()">Check API</button>
-                </p>
+
+                    <br>
+                    
+                </div>
             </div>
         </div>
 
