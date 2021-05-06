@@ -22,6 +22,8 @@ async function openNav(){
     }
 }
 
+
+//func to find out get the raid info from the api
 const api_url = 'https://api.guildwars2.com/';
 
 async function check_raids(){
@@ -34,8 +36,8 @@ async function check_raids(){
     
 }
 
-function check_bosses(data){
-    
+//func to display what bosses have been killed so far
+function check_bosses(data){  
     data.forEach(raid_boss => {
         $('#' + raid_boss).css('color', 'lime');
     });
@@ -43,12 +45,43 @@ function check_bosses(data){
 
 function submit_api(){
     api_key = document.getElementById("api_key_input").value;
-    localStorage.setItem("api_key" , api_key)
+    //enter validation here
+    if(api_key!="")
+        localStorage.setItem("api_key" , api_key)
  
 }
 
+var menu_state = 1;
+function collapse_api_menu(){
+    if(!menu_state){
+        $("#api_key_menu").css("width", "auto");
+        $("#api_key_menu").css("border", "2px solid black");
+        $(".api_key_menu_item").css("display", "inline-block");
+        $("#api_key_menu_btn").html("<")
+        menu_state = 1;
+    }else{
+        $(".api_key_menu_item").css("display", "none");
+        alert("im here");
+        $("#api_key_menu").css("width", "0%");
+        $("#api_key_menu").css("border", "0px solid black");
+        
+        $("#api_key_menu_btn").html("=")
+        menu_state = 0;
+    }
+}
+
+function remove_api(){
+    localStorage.removeItem("api_key");
+}
+
 function check_api(){
-    alert(localStorage.getItem("api_key"));
+    var api = localStorage.getItem("api_key");
+    if(api != null){
+        alert(api);
+    }else{
+        alert("No API key submitted")
+    }
+    
 }
 
 function CheckboxReadOnly() {

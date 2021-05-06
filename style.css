@@ -3,6 +3,40 @@ header{
     background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
     border-bottom: 3px solid black;
 }
+
+#api_key_menu{
+    color: black;
+    float: right;
+    margin-top: 4px;
+    margin-right: 5px;
+    border: 2px solid black;
+    background-color: lightgray !important;
+    width: auto;
+    transition: 0.3;
+}
+
+#api_key_input{
+    border: 1px solid black !important;
+    box-shadow: 2px 2px rgb(105, 105, 105);
+    width: 300px;
+    margin-right: 5px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+#api_key_menu_btn{
+    float: right;
+    border-radius: 10px;
+    margin-top:7px;
+    width: 40px;
+    height: 40px;
+    
+}
+
+.api_key_menu_item{
+    display: inline !important;
+}
+
 .main_div{
     height: 100%;
     width: 10%;
@@ -51,10 +85,21 @@ button{
     visibility: visible;
     margin-top: 5px;
     border-radius: 5px !important;
+    
+}
+
+#remove_btn{
+    border-radius: 5px !important;
+    margin-right: 5px;
 }
 
 #content{
     width: 385px;
+    padding-left: 10px;
+    margin-bottom: 0px !important;
+}
+
+.centered{
     text-align: center;
 }
 
@@ -71,9 +116,11 @@ button{
     box-shadow: 2px 2px rgb(105, 105, 105);
 }
 
-#api_key_input{
-    border: 1px solid black !important;
-    box-shadow: 2px 2px rgb(105, 105, 105);
+
+
+.nav_bar_content li:hover{
+    color: red;
+    border-left: 1px solid darkgray;
 }
 
 .nav_bar_content li{
@@ -82,6 +129,48 @@ button{
     color: white;
     font-size: 20px;
     display: none;
+    user-select: none;
+    cursor: default;
+}
+
+
+table{
+    margin: 10px;
+    border:2px solid black;
+}
+
+tr{
+    border: 2px solid black;
+}
+
+table td, table th {
+    border: 1px solid black;
+}
+
+td{
+    padding: 10px;
+    padding-right: 20px;
+}
+
+.test_form{
+    border: 2px solid black;
+    width: 325px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.input_form{
+    text-align: left !important;
+    align-self: flex-start !important;
+}
+
+.btn_grp{
+    text-align: center;
+}
+
+.form_button{
+    margin: 15px 15px 0px 0px;
+    
 }
 
 /* Control the left side */
@@ -108,10 +197,7 @@ button{
 
   }
 
-  #content{
-      padding-left: 10px;
-      margin-bottom: 0px !important;
-  }
+
 
   #logo{
       margin-bottom: 15px;
@@ -128,7 +214,6 @@ button{
   }
 
   #selected{
-      background-color:gray !important;
       color: darkgray;
   }
 
