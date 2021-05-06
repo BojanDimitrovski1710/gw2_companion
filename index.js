@@ -48,6 +48,7 @@ function submit_api(){
     //enter validation here
     if(api_key!="")
         localStorage.setItem("api_key" , api_key)
+    document.getElementById("api_key_input").value = "";
  
 }
 
