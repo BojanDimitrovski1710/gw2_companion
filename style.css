@@ -120,7 +120,6 @@ button{
 
 .nav_bar_content li:hover{
     color: red;
-    border-left: 1px solid darkgray;
 }
 
 .nav_bar_content li{
