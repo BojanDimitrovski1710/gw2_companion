@@ -120,6 +120,7 @@ button{
 
 .nav_bar_content li:hover{
     color: red;
+
 }
 
 .nav_bar_content li{
@@ -214,6 +215,7 @@ td{
 
   #selected{
       color: darkgray;
+      margin-bottom: 1px solid red;
   }
 
   .header_container{
