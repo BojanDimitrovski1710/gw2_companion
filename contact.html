@@ -18,8 +18,15 @@
             <img src="https://i.ibb.co/8NHYk0g/logo2.png" id="logo" class="inline">
             <button onclick="openNav()" id="nav_button"><i class="fas fa-bars"></i></button>
             <h1 class="inline">My Testing site</h1>
+            <button id="api_key_menu_btn" onclick="collapse_api_menu()"> = </button>
+            <div id="api_key_menu" class="inline">
+                <input type="text" id="api_key_input" class="form-control api_key_menu_item" placeholder="XXXX-XXXX-XXXX-XXXX-XXXX-XXXX-XXXX-XXXX">
+
+                <button class="btn-success api_key_menu_item" id="submit_btn" onclick="submit_api()">Submit</button>
+                <button class="btn-primary api_key_menu_item" id="check_btn" onclick="check_api()">Check API</button>
+                <button class="btn-danger api_key_menu_item" id="remove_btn" onclick="remove_api()">Remove</button>
+            </div>
         </div>
-        
     </header>
     <body>
         <!--NavBar-->
@@ -38,9 +45,20 @@
         <!--Site Content-->
         <div class="split right inline">
             <div class="info">
-                <p id='content'>
-                    Contact
-                </p>
+                <div id="contact-info">
+                    <p>
+                        This is a 100% non profit project currently being developed purely for practice surrounding html/css/javascript/api calls.
+                        <br>
+                        If you have any suggestions, complaints, bug reports, or simmilar you can contact me on:
+                    </p>
+
+                    <ul id="contact-ul">
+                        <li class="contact-info inline">Discord: <p id="contact">Sigh#6130</p></li>
+                        <li class="contact-info inline">Email: <p id="contact">bojan@dimitrovski.info</p></li>
+                        <li class="contact-info inline">GitHub: <p id="contact">BojanDimitrovski1710</p></li>
+                    </ul>
+
+                </div>         
             </div>
         </div>
 

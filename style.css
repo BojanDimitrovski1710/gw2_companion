@@ -9,10 +9,11 @@ header{
     float: right;
     margin-top: 4px;
     margin-right: 5px;
-    border: 2px solid black;
+    border: 0px solid black;
     background-color: lightgray !important;
-    width: auto;
-    transition: 0.3;
+    width: 0;
+
+    
 }
 
 #api_key_input{
@@ -22,6 +23,11 @@ header{
     margin-right: 5px;
     margin-top: 3px;
     margin-bottom: 3px;
+
+    
+    
+
+    display: none;
 }
 
 #api_key_menu_btn{
@@ -34,13 +40,15 @@ header{
 }
 
 .api_key_menu_item{
-    display: inline !important;
+    
+    
+    display:  none;
 }
 
 .main_div{
     height: 100%;
     width: 10%;
-    transition: 0.3s;
+    transition: 3s;
     justify-content: left;
 
 }
@@ -94,7 +102,7 @@ button{
 }
 
 #content{
-    width: 385px;
+    width: 80%;
     padding-left: 10px;
     margin-bottom: 0px !important;
 }
@@ -120,7 +128,7 @@ button{
 
 .nav_bar_content li:hover{
     color: red;
-
+    border-bottom: red;
 }
 
 .nav_bar_content li{
@@ -178,7 +186,7 @@ td{
     background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
     justify-content: center;
     align-items: center;
-    transition: 0.3s;
+    transition: 0.4s;
     width: 0%;
     height: 100%;
     left: 0;
@@ -190,7 +198,7 @@ td{
   /* Control the right side */
   .right {
     background-image: linear-gradient(-20deg, #f794a4 0%, #fdd6bd 100%);
-    transition: 0.3s;
+    transition: 0.4s;
     width: 100%;
     height: 100%;
     right: 0;
@@ -215,7 +223,6 @@ td{
 
   #selected{
       color: darkgray;
-      margin-bottom: 1px solid red;
   }
 
   .header_container{
@@ -226,6 +233,35 @@ td{
   .inline{
       display: inline !important;
   }
+
+  #contact{
+    font-style: italic;
+    text-decoration: underline;
+    color: #0000EE;   
+    user-select:text !important;
+    cursor: text !important;  
+}
+
+.contact-info{
+    user-select: none;
+    cursor: default;
+}
+
+#contact-ul{
+    padding-left: 0px !important;
+}
+
+#contact-info{
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    background-color: lightgray;
+    box-shadow: 2px 2px darkgray;
+    width: 80%;
+    margin-top: 10px;
+    padding-left: 10px;
+    border: 2px solid black;
+}
 
   div.inline { float:left; }
 

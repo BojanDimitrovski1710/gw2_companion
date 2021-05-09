@@ -22,6 +22,23 @@ async function openNav(){
     }
 }
 
+var menu_state = 0;
+async function collapse_api_menu(){
+    if(!menu_state){
+        $("#api_key_menu").css("width", "auto");
+        $(".api_key_menu_item").css("display", "inline-block");
+        $("#api_key_menu").css("border", "2px solid black");
+        $("#api_key_menu_btn").html("<");
+        menu_state = 1;
+    }else{
+        $("#api_key_menu").css("width", "0%");
+        $(".api_key_menu_item").css("display", "none");
+        $("#api_key_menu").css("border", "0px solid black");
+        $("#api_key_menu_btn").html("=");
+        menu_state = 0;
+    }
+}
+
 
 //func to find out get the raid info from the api
 const api_url = 'https://api.guildwars2.com/';
@@ -40,36 +57,30 @@ async function check_raids(){
 function check_bosses(data){  
     data.forEach(raid_boss => {
         $('#' + raid_boss).css('color', 'lime');
+        $('#' + raid_boss).css('text-shadow', '1px 1px black');
     });
+}
+
+function validate_key(api){
+    var api_parts= api.split("-");
+    if(api_parts[0].length ===  8 && api_parts[1].length === 4 && api_parts[2].length === 4 && api_parts[3].length === 4 && api_parts[4].length === 20 && api_parts[5].length === 4 && api_parts[6].length === 4 && api_parts[7].length === 4 && api_parts[8].length === 12){
+        return true;
+    }else{
+        alert("Invalid API key");
+        return false;
+    }
 }
 
 function submit_api(){
     api_key = document.getElementById("api_key_input").value;
     //enter validation here
-    if(api_key!="")
+    if(validate_key(api_key))
         localStorage.setItem("api_key" , api_key)
     document.getElementById("api_key_input").value = "";
  
 }
 
-var menu_state = 1;
-function collapse_api_menu(){
-    if(!menu_state){
-        $("#api_key_menu").css("width", "auto");
-        $("#api_key_menu").css("border", "2px solid black");
-        $(".api_key_menu_item").css("display", "inline-block");
-        $("#api_key_menu_btn").html("<")
-        menu_state = 1;
-    }else{
-        $(".api_key_menu_item").css("display", "none");
-        alert("im here");
-        $("#api_key_menu").css("width", "0%");
-        $("#api_key_menu").css("border", "0px solid black");
-        
-        $("#api_key_menu_btn").html("=")
-        menu_state = 0;
-    }
-}
+
 
 function remove_api(){
     localStorage.removeItem("api_key");
