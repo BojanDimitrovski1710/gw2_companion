@@ -44,12 +44,18 @@ async function collapse_api_menu(){
 const api_url = 'https://api.guildwars2.com/';
 
 async function check_raids(){
-    const raid_url = api_url + 'v2/account/raids?access_token=';
-    const raids = await fetch(raid_url + localStorage.getItem("api_key"));
-
-    var data = await raids.json(); 
+    api_key = localStorage.getItem("api_key");
+    if(api_key === null){
+        alert("No Key entered");
+    }else{
+        const raid_url = api_url + 'v2/account/raids?access_token=';
+        const raids = await fetch(raid_url + localStorage.getItem("api_key"));
     
-    check_bosses(data);
+        var data = await raids.json(); 
+        
+        check_bosses(data);
+    }
+    
     
 }
 
@@ -74,8 +80,10 @@ function validate_key(api){
 function submit_api(){
     api_key = document.getElementById("api_key_input").value;
     //enter validation here
-    if(validate_key(api_key))
-        localStorage.setItem("api_key" , api_key)
+    if(validate_key(api_key)){
+        alert("Key successfully entered");
+        localStorage.setItem("api_key" , api_key);
+    }
     document.getElementById("api_key_input").value = "";
  
 }
@@ -89,15 +97,21 @@ async function check_characters(){
     
     console.log(data);
 
-    console.log(data[1]);
+    display_characters(data);
     
 } 
 
+function display_characters(char_list){
+    char_list.forEach(character => {
+        document.getElementById("char-table").innerHTML += " <tr> <td>" + character + "</td> <td> <button class=\"btn-primary\">View More</button> </td> </tr>";
+    });
+}
 
 
 
 function remove_api(){
     localStorage.removeItem("api_key");
+    alert("Key successfully removed");
 }
 
 function check_api(){
