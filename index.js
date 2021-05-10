@@ -81,6 +81,20 @@ function submit_api(){
 }
 
 
+async function check_characters(){
+    const raid_url = api_url + 'v2/characters?access_token=';
+    const raids = await fetch(raid_url + localStorage.getItem("api_key"));
+
+    var data = await raids.json(); 
+    
+    console.log(data);
+
+    console.log(data[1]);
+    
+} 
+
+
+
 
 function remove_api(){
     localStorage.removeItem("api_key");

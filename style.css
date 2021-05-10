@@ -263,5 +263,22 @@ td{
     border: 2px solid black;
 }
 
+#home-info{
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    background-color: lightgray;
+    box-shadow: 2px 2px darkgray;
+    width: 80%;
+    margin-top: 10px;
+    padding-left: 10px;
+    border: 2px solid black;
+    text-align: start;
+}
+
+#nav-li-element{
+    border: 2px solid black;
+}
+
   div.inline { float:left; }
 
